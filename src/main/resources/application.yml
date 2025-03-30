@@ -13,7 +13,7 @@ spring:
             url: https://api.twitch.tv/helix
             loggerLevel: basic
             default-request-headers:
-              Client-Id: "Your twitch client id"
+              Client-Id: "8d6fk4ry353hxmxmbpksduoyozbgkp"
   security:
     oauth2:
       client:
@@ -21,8 +21,8 @@ spring:
           twitch:
             authorization-grant-type: client_credentials
             client-authentication-method: client_secret_post
-            client-id: "Your twitch client id"
-            client-secret: "Your twitch client secret"
+            client-id: "8d6fk4ry353hxmxmbpksduoyozbgkp"
+            client-secret: "m7r1mb6dbb3z3xy62g7ma9fq57be4v"
         provider:
           twitch:
             token-uri: https://id.twitch.tv/oauth2/token

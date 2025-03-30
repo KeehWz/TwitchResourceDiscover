@@ -2,7 +2,33 @@ spring:
   jackson:
     default-property-inclusion: non_null
     property-naming-strategy: SNAKE_CASE
+  cloud:
+    openfeign:
+      oauth2:
+        enabled: true
+        clientRegistrationId: twitch
+      client:
+        config:
+          twitch-api:
+            url: https://api.twitch.tv/helix
+            loggerLevel: basic
+            default-request-headers:
+              Client-Id: "Your twitch client id"
+  security:
+    oauth2:
+      client:
+        registration:
+          twitch:
+            authorization-grant-type: client_credentials
+            client-authentication-method: client_secret_post
+            client-id: "Your twitch client id"
+            client-secret: "Your twitch client secret"
+        provider:
+          twitch:
+            token-uri: https://id.twitch.tv/oauth2/token
+
 
 logging:
   level:
-    org.apache.coyote.http11.Http11InputBuffer: TRACE # Incoming HTTP requests
+    org.apache.coyote.http11.Http11InputBuffer: TRACE # Incoming http requests
+    com.laioffer.twitch.external.TwitchApiClient: DEBUGuests

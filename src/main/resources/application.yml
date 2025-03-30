@@ -31,4 +31,4 @@ spring:
 logging:
   level:
     org.apache.coyote.http11.Http11InputBuffer: TRACE # Incoming http requests
-    com.laioffer.twitch.external.TwitchApiClient: DEBUGuests
+    com.laioffer.twitch.external.TwitchApiClient: DEBUG
